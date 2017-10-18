@@ -1,5 +1,6 @@
 This project is a simple control scenario of an ardrone using ROS.
 The simulation were performed in gazebo with TUM ardrone simulator and using AR_marks.
+This is a short-project for UPC-240AR060 (spring semester 2016-2017).
 
 # Introduction to ROS
 
