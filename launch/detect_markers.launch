@@ -1,0 +1,22 @@
+<launch>
+	<node name="ar_pose_floor" pkg="ar_pose" type="ar_single" respawn="false" output="screen">
+		<param name="marker_frame" type="string" value="floor"/>
+		<param name="marker_pattern" type="string" value="data/4x4/4x4_8.patt"/>
+		<parem name="marker_width" type="double" value="150" />
+		<parem name="marker_center_x" type="double" value="0.0" />
+		<parem name="marker_center_y" type="double" value="0.0" />
+		<parem name="threshold" type="int" value="60" />
+		<parem name="use_history" type="bool" value="true" />
+		<remap from="/camera/camera_info" to="/ardrone/camera_info" />
+		<remap from="/camera/image_raw" to="/ardrone/image_raw" />
+	</node>
+	<node name="ar_pose_wall" pkg ="ar_pose" type="ar_single" respawn="false" output="screen">
+		<param name="marker_frame" type="string" value="wall"/>
+		<param name="marker_pattern" type="string" value="data/4x4/4x4_95.patt"/>
+		<parem name="marker_width" type="double" value="150" />
+		<parem name="threshold" type="int" value="60" />
+		<parem name="use_history" type="bool" value="true" />
+		<remap from="/camera/camera_info" to="/ardrone/camera_info" />
+		<remap from="/camera/image_raw" to="/ardrone/image_raw" />
+	</node>
+</launch>
